@@ -1,0 +1,25 @@
+# Location of where hello.c is stored in
+SRCDIR=./src
+LIBS=./include
+
+# Name of the compiler, GNU GCC in this case
+CC=clang
+
+# Any include directories
+INCLUDE = /opt/homebrew/include
+
+# Any flags for the compiler
+CFLAGS = -g -I$(INCLUDE) -C
+#CFLAGS = -g -c
+
+# Any libraries to link with
+LIBS = /opt/homebrew/lib
+
+# Extra flags to give to compilers when they are supposed to invoke the linker
+LDFLAGS = -lSDL2main -lSDL2
+
+all:  
+	@echo "Building Final"
+	$(CC) $(CFLAGS) $(SRCDIR)/alien.c $(SRCDIR)/spaceman.c $(SRCDIR)/world.c $(SRCDIR)/main.c $(LDFLAGS) -o aliens -L $(LIBS)
+clean:
+	rm -f aliens
