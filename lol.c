@@ -10,8 +10,6 @@ printf("elllooo World! \n");
 printf("lololololol2");
 return 0;
 
-looooooooooolzjsdijhwi
-hwrhoaiwhowiahroiawhy
 //hello
 }
 
